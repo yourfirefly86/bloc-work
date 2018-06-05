@@ -1,0 +1,34 @@
+Exercises:
+<ol>
+  <li>I found the React documentation to be excellent - the interactive nature of the documentation really helps understand what React does. My strategy for reading technical documentation in the future is to take notes on the documentation as I read it and look up things that I don't understand. I think looking things up and taking notes will help me when I'm first learning to read technical documentation.</li>
+</ol>
+
+//New React Component
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New React Component</title>
+</head>
+<body>
+  <div id="app"></div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+     <script type="text/babel">
+       class SayHello extends React.Component {
+         render() {
+           return (
+             <div>
+               <h1>Hello, Grader!</h1>
+             </div>
+           );
+         }
+       }
+
+       ReactDOM.render(
+         <SayHello />, document.getElementById('app')
+       );
+    </script>
+  </body>
+</html>
