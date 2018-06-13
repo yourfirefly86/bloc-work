@@ -1,0 +1,42 @@
+Exercises
+
+The differences between state and props are:
+State is internal, which means that in the unidirectional way React works, the state only affects things that come after it. It changes, but those changes come from the component itself.
+Props is external, but immutable. It's never able to be manipulated, especially not by the component.
+
+//New React Component
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New React Component</title>
+</head>
+<body>
+  <div id="app"></div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+     <script type="text/babel">
+       class SayHello extends React.Component {
+         constructor(props){
+           super(props);
+           this.state = {
+             number: 2
+           }
+         }
+
+         render() {
+           return (
+             <div>
+              <h1>Hello, Grader!</h1>
+               <h2>Current assignment: {this.state.number}</h2>
+             </div>
+           );
+         }
+       }
+       ReactDOM.render(
+         <SayHello />, document.getElementById('app')
+       );
+    </script>
+  </body>
+</html>
